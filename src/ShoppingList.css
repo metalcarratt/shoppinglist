@@ -1,0 +1,71 @@
+body {
+    background-color: #b7b7b7;
+
+    /* background-color: hsl(2, 57%, 40%);
+    background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+    repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+    repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px); */
+}
+
+.shoppingList {
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px;
+}
+
+h1 {
+    font-family: sans-serif;
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 8px;
+}
+
+input[type="text"] {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 4px;
+    color: #666;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    font-size: 16px;
+    padding: 4px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    margin-bottom: 80px;
+    margin-top: 40px;
+}
+
+li {
+    font-family: sans-serif;
+    border-bottom: 1px solid #ccc;
+    list-style: none;
+    padding: 4px 0;
+    font-size: 32px;
+}
+
+li .ordinal {
+    color: #aaa;
+    display: inline-block;
+    width: 60px;
+}
+
+li:hover {
+    cursor: pointer;
+    background-color: #ffefef;
+}
