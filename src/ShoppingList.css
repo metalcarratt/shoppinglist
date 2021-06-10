@@ -1,15 +1,14 @@
 body {
     background-color: #b7b7b7;
-
-    /* background-color: hsl(2, 57%, 40%);
-    background-image: repeating-linear-gradient(transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
-    repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
-    repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px); */
 }
 
 .shoppingList {
+    display: inline-block;
+    vertical-align: top;
     width: 300px;
-    margin: 0 auto;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    /* margin: 0 auto; */
     background-color: white;
     padding: 40px;
     border-radius: 20px;
@@ -33,7 +32,7 @@ input[type="text"] {
     color: #666;
 }
 
-button {
+.newItem button {
     display: block;
     width: 100%;
     margin-top: 4px;
@@ -68,4 +67,23 @@ li .ordinal {
 li:hover {
     cursor: pointer;
     background-color: #ffefef;
+}
+
+
+.actions {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.actions button {
+    padding: 20px;
+    font-size: 18px;
+    background-color: #8cc584;
+    border: 1px solid black;
+}
+
+.actions button:hover {
+    background-color: #668c61;
 }
