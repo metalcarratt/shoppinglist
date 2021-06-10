@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ShoppingList.css';
+import ShoppingListItem from './ShoppingListItem';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, undo, removeItem } from './store/itemsSlice';
 
@@ -23,13 +23,9 @@ export default function ShoppingList() {
         <div className="shoppingList">
             <h1>Shopping List</h1>
             <ul>
-                { 
-                    items.map((item, itemIndex) => (
-                        <li key={item} onClick={() => dispatch(removeItem(item))}>
-                            <span className="ordinal">{ (itemIndex + 1) + '. ' }</span>
-                            <span className="title">{ item }</span>
-                        </li>
-                    ))}
+                { items.map((item, itemIndex) => (
+                    <ShoppingListItem index={itemIndex + 1} key={item} item={item} onClick={() => dispatch(removeItem(item))} />
+                ))}
             </ul>
             <div className="newItem">
                 <input type="text" value={newItem} onChange={handleChange} placeholder="New Item" />
