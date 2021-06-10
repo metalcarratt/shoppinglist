@@ -1,6 +1,6 @@
-import ShoppingListProvider from './ShoppingListProvider';
+import ShoppingListProvider from '../shoppinglist/ShoppingListProvider';
 import { useSelector, useDispatch } from 'react-redux';
-import { addList } from './store/shoppingListsSlice';
+import { addList } from '../store/shoppingListsSlice';
 
 const LIST_NAME = "Shopping List";
 

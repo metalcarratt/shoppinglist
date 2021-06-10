@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import ShoppingListItem from './ShoppingListItem';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShare, faHome } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
-export default function ShoppingList({list, name}) {
+export default function ShoppingList({list, name, solo}) {
     const [newItem, setNewItem] = useState('');
     
     const handleChange = function(event) {
@@ -14,8 +17,20 @@ export default function ShoppingList({list, name}) {
     }
 
     return (
-        <div className="shoppingList">
-            <h1>{name}</h1>
+        <div className={'shoppingList' + (solo ? ' solo' : '')}>
+            <h1>
+                {name}
+                { !solo &&
+                    <Link to={`/list/${name}`}>
+                        <FontAwesomeIcon icon={faShare} />
+                    </Link>    
+                }
+                { solo &&
+                    <Link to="/">
+                        <FontAwesomeIcon icon={faHome} />
+                    </Link>    
+                }                
+            </h1>
             <ul>
                 { list.items.map((item, itemIndex) => (
                     <ShoppingListItem

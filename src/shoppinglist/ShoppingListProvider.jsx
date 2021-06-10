@@ -1,8 +1,8 @@
 import ShoppingList from './ShoppingList';
 import { useSelector, useDispatch } from 'react-redux';
-import { addItem, undo, removeItem } from './store/shoppingListsSlice';
+import { addItem, undo, removeItem } from '../store/shoppingListsSlice';
 
-export default function ShoppingListProvider({listName}) {
+export default function ShoppingListProvider({listName, solo}) {
     window.console.log(`ShoppingListProvider with listName=${listName}`);
     const items = useSelector((state) => state.items[listName]);
     const dispatch = useDispatch();
@@ -24,6 +24,6 @@ export default function ShoppingListProvider({listName}) {
     }
 
     return (
-        <ShoppingList list={list} name={listName}/>
+        <ShoppingList list={list} name={listName} solo={solo} />
     );
 }
